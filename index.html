@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html class="ie8"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+		<title>Dreamshare</title>
+
+		<!-- Normalize -->
+		<style type="text/css">
+			/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+			html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{-webkit-box-sizing:content-box;box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{-webkit-box-sizing:border-box;box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+		</style>
+		
+		<!-- Reset -->
+		<style type="text/css">
+			/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 | License: none (public domain) */
+			a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}a{text-decoration:none}b,strong{font-weight:900}
+		</style>
+
+		<!-- Fonts -->
+		<link
+			rel="preload"
+			as="style"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			as="style"
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+			crossorigin="anonymous"
+		/>
+
+		<!-- Critical CSS -->
+		<style>
+			*{-webkit-box-sizing:border-box;box-sizing:border-box}body{font-family:"Montserrat",sans-serif;color:#444;font-size:22px;font-weight:700;line-height: 27px;}body.lock{overflow:hidden}.image-wrapper img,.image-wrapper picture{width:100%}.container{width:100%;padding: 0 10px;}.row{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:wrap;flex-wrap:wrap}.column{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%}.button{width:-webkit-max-content;width:-moz-max-content;width:max-content;padding:9px 17px;text-align:center;box-sizing:border-box;border:1px solid;border-radius:20px;background-color:transparent;transition:all .5s ease;cursor:pointer}.button--white{color:#fff;border-color:transparent}.button--white:hover{color:#000;background-color:#fff}.button--outline-white{color:#fff;border-color:#fff}.button--outline-white:hover{color:#000;background-color:#fff}.header{position:relative;z-index:1;}.nav{display:flex;flex-direction:column-reverse;}.brand-logo{color:#fff;margin:95px auto 0 auto;text-transform:uppercase;font-size:20px;font-weight:700;line-height:24px;cursor:default}.brand-logo::after{content:"";width:0;height:2px;display:block;position:relative;top:0;left:50%;background-color:#fff;transition:all .5s ease}.brand-logo:hover::after{width:99%;left:1px}.register{margin:20px auto 0 auto;}.register__button{font-size:14px;font-weight:400;line-height:17px;}.modal-register{display:none;}.hero,.about,.partners,.offers{margin-bottom:94px;text-align:center;}.hero{height:364px;color:#fff;}.hero::before{content:"";height:540px;width:100%;position:absolute;top:0;left:0;background:url(../img/header/Back1.png)top no-repeat;background-size:cover;background-color:#000;z-index:0}.hero__title,.hero__text,.hero__button{position:relative;}.hero__title{margin-top:25px;margin-bottom:20px;padding:0;font-size:30px;font-weight:700;line-height:37px;text-transform:uppercase;}.hero__text{font-family:"Roboto",sans-serif;margin-bottom:40px;font-size:18px;font-weight:300;line-height:24.5px}.hero__button{padding:12px 46px;font-size:14px;font-weight:700;line-height:17px;}
+		</style>
+
+		<style media="screen and (min-width: 768px)">
+			.container{padding:0 17.36111111111111%;}.brand-logo{cursor:pointer;}
+		</style>
+
+		<style media="screen and (min-width: 481px) and (max-width: 1023px)">
+			.header{padding:0 40px;}
+		</style>
+
+		<style media="screen and (min-width: 481px)">
+			.nav{flex-direction:row;align-items:center;padding:40px 15px 0 15px;}.brand-logo{margin:0;}.register{margin:0}.hero{height:700px;}.hero::before{height:700px}.hero__title{padding-top:142px;margin-bottom:20px;font-size:52px;font-weight:700;line-height:63px}.hero__text{font-size:24px;font-weight:300;line-height:24.5px;margin-bottom:40px}.hero__button{padding:12px 46px;font-size:14px;font-weight:700;line-height:17px}
+		</style>
+		
+		<link
+			type="text/css"
+			rel="preload"
+			as="style"
+			href="css/style.min.css"
+			onload="this.load=null;this.rel='stylesheet'"
+		/>
+
+		<noscript>
+			<link
+				type="text/css"
+				rel="stylesheet"
+				href="css/style.min.css"
+			/>
+		</noscript>
+		
+		<!-- Styles for animation -->
+		<link type="text/css" rel="stylesheet" href="css/animate.min.css" media="all" />
+
+		<!-- Script for animation -->
+		<script src="js/wow.min.js"></script>
+
+		<script>
+			/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+			(function(a){if(!a.loadCSS){a.loadCSS=function(){}}var b=loadCSS.relpreload={};b.support=(function(){var d;try{d=a.document.createElement("link").relList.supports("preload")}catch(f){d=false}return function(){return d}})();b.bindMediaToggle=function(e){var f=e.media||"all";function d(){e.media=f}if(e.addEventListener){e.addEventListener("load",d)}else{if(e.attachEvent){e.attachEvent("onload",d)}}setTimeout(function(){e.rel="stylesheet";e.media="only x"});setTimeout(d,3000)};b.poly=function(){if(b.support()){return}var d=a.document.getElementsByTagName("link");for(var e=0;e<d.length;e++){var f=d[e];if(f.rel==="preload"&&f.getAttribute("as")==="style"&&!f.getAttribute("data-loadcss")){f.setAttribute("data-loadcss",true);b.bindMediaToggle(f)}}};if(!b.support()){b.poly();var c=a.setInterval(b.poly,500);if(a.addEventListener){a.addEventListener("load",function(){b.poly();a.clearInterval(c)})}else{if(a.attachEvent){a.attachEvent("onload",function(){b.poly();a.clearInterval(c)})}}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{a.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+		</script>
+	</head>
+	<body>
+		<header class="header container">
+			<nav class="nav row">
+				<a class="brand-logo" href="#">Dreamshare</a>
+				<div class="register">
+					<a class="register__button button button--white" id="log-in" href="#">Log in</a>
+					<a class="register__button button button--outline-white" id="sign-up" href="#">Sign up</a>
+				</div>
+			</nav>
+		</header>
+
+		<div class="modal-register">
+			<div class="form-login">
+				<span class="modal-close"></span>
+				<h2 class="form__title">Welcome</h2>
+				<form>
+					<label class="form__label" for="login">Login</label>
+					<input class="form__input" type="text" name="login" />
+					<label class="form__label" for="password">Password</label>
+					<input class="form__input"  type="password" name="password" />
+					<a class="form-login__link" href="#">Forget password?</a>
+					<input class="button button--fill-red form__button" type="button" name="submit" value="Log in"/>
+				</form>
+				<div class="form-footer">
+					<p class="form-footer__text">Don't have an account?</p>
+					<a class="form-login__link" href="#">Sign up</a>
+				</div>
+			</div>
+			<div class="form-sign-up">
+				<span class="modal-close"></span>
+				<h2 class="form__title">Sign In</h2>
+				<form>
+					<label class="form__label" for="email">E-mail</label>
+					<input class="form__input" type="email" name="email" />
+					<label class="form__label" for="name">Full Name</label>
+					<input class="form__input" type="text" name="name" />
+					<label class="form__label" for="login">Login</label>
+					<input class="form__input" type="text" name="login" />
+					<label class="form__label" for="password">Password</label>
+					<input class="form__input"  type="password" name="password" />
+					<input class="button button--fill-red form__button" type="button" name="submit" value="Sign up"/>
+				</form>
+			</div>
+		</div>
+
+		<div class="hero">
+			<h1 class="hero__title wow fadeIn" data-wow-duration="1s">
+				Share your<br />
+				Holiday Dream
+			</h1>
+			<p class="hero__text wow fadeIn" data-wow-duration="1s">And find the perfect partner to fullfill it</p>
+			<a class="button button--fill-red hero__button wow fadeIn" data-wow-duration="1s" href="#">Find your holiday partner</a>
+		</div>
+
+		<article class="container">
+
+			<section class="about">
+				<h5 class="main-title">How Dreamshare works?</h5>
+				<div class="about__row row wow slideInUp" data-wow-duration="1s">
+					<div class="about__column">
+						<div class="about__body ibg">
+							<picture>
+								<source src="img/HowWorks/howDreamshareWork1.webp" type="image/webp" />
+								<img src="img/HowWorks/howDreamshareWork1.png" alt="" />
+							</picture>
+							<span class="about__subtitle">Step 1</span>
+							<h3 class="about__title">Sed leo enim, condimentum</h3>
+							<p class="about__text">Quisque libero libero, dictum non turpis in, luctus semper lorem.
+								Donec rhoncus a leo sit amet facilisis.</p>
+						</div>
+					</div>
+					<div class="about__column">
+						<div class="about__body ibg">
+							<picture>
+								<source src="img/HowWorks/howDreamshareWork2.webp" type="image/webp" />
+								<img src="img/HowWorks/howDreamshareWork2.png" alt="" />
+							</picture>
+							<span class="about__subtitle">Step 2</span>
+							<h3 class="about__title">Morbi velit risus</h3>
+							<p class="about__text">Nulla venenatis tempor dui in molestie. Nulla quis dictum purus,
+								sit amet porttitor est.</p>
+						</div>
+					</div>
+					<div class="about__column">
+						<div class="about__body ibg">
+							<picture>
+								<source src="img/HowWorks/howDreamshareWork3.webp" type="image/webp" />
+								<img src="img/HowWorks/howDreamshareWork3.png" alt="" />
+							</picture>
+							<span class="about__subtitle">Step 3</span>
+							<h3 class="about__title">Sed leo enim, condimentum</h3>
+							<p class="about__text">Quisque libero libero, dictum non turpis in, luctus semper lorem.
+								Donec rhoncus a leo sit amet facilisis.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+        
+			<section class="partners">
+				<h5 class="main-title">Meet a partner for your best holiday</h5>
+				<div class="partners__row row wow zoomIn" data-wow-duration="1s" data-wow-delay="0.3s">
+					<div class="partners__column partner">
+						<div class="partner__body">
+							<div class="partner__avatar avatar-1">
+								<a href="#">
+									<picture>
+										<source src="img/Partners/Partner1.webp" type="image/webp" />
+										<img src="img/Partners/Partner1.png" alt="Bradley Hunter" />
+									</picture>
+								</a>
+							</div>
+							<a class="partner__link" href="#">Bradley Hunter</a>
+							<p class="partner__text">Based in Chicago. I love playing tennis and loud music.</p>
+						</div>
+					</div>
+					<div class="partners__column partner">
+						<div class="partner__body">
+							<div class="partner__avatar avatar-2">
+								<a href="#">
+									<picture>
+										<source src="img/Partners/Partner2.webp" type="image/webp" />
+										<img src="img/Partners/Partner2.png" alt="Marie Bennett" />
+									</picture>
+								</a>
+							</div>
+							<a class="partner__link" href="#">Marie Bennett</a>
+							<p class="partner__text">Currently living in Colorado. Lover of art, languages and
+								travelling.</p>
+						</div>
+					</div>
+					<div class="partners__column partner">
+						<div class="partner__body">
+							<div class="partner__avatar avatar-3">
+								<a href="#">
+									<picture>
+										<source src="img/Partners/Partner3.webp" type="image/webp" />
+										<img src="img/Partners/Partner3.png" alt="Diana Wells" />
+									</picture>
+								</a>
+							</div>
+							<a class="partner__link" href="#">Diana Wells</a>
+							<p class="partner__text">Living in Athens, Greece. I love black and white classics,
+								chillout music and green tea.</p>
+						</div>
+					</div>
+					<div class="partners__column partner">
+						<div class="partner__body">
+							<div class="partner__avatar avatar-4">
+								<a href="#">
+									<picture>
+										<source src="img/Partners/Partner4.webp" type="image/webp" />
+										<img src="img/Partners/Partner4.png" alt="Christopher Pierce" />
+									</picture>
+								</a>
+							</div>
+							<a class="partner__link" href="#">Christopher Pierce</a>
+							<p class="partner__text">Star Wars fanatic. I have a persistent enthusiasm to create new
+								things.</p>
+						</div>
+					</div>
+				</div>
+				<a class="partners__link button button--outline-red wow fadeIn" href="#">See other partners</a>
+			</section>
+
+			<section class="offers">
+				<h5 class="main-title">Discover holiday activity ideas</h5>
+				<div class="offers__row row wow fadeInUp" data-wow-duration="1s">
+					<div class="offers__column--1">
+						<a class="offers__links ibg" href="#">
+							<picture>
+								<source src="img/HolidayIdeas/HolidayIdeas1.webp" type="image/webp" />
+								<img src="img/HolidayIdeas/HolidayIdeas1.png" alt="" />
+							</picture>
+							Sports and Activis
+						</a>
+					</div>
+					<div class="offers__column--1 ibg">
+						<a class="offers__links ibg" href="#">
+							<picture>
+								<source src="img/HolidayIdeas/HolidayIdeas2.webp" type="image/webp" />
+								<img src="img/HolidayIdeas/HolidayIdeas2.png" alt="" />
+							</picture>
+							Wellness and Health
+						</a>
+					</div>
+					<div class="offers__column--1 ibg">
+						<a class="offers__links ibg" href="#">
+							<picture>
+								<source src="img/HolidayIdeas/HolidayIdeas3.webp" type="image/webp" />
+								<img src="img/HolidayIdeas/HolidayIdeas3.png" alt="" />
+							</picture>
+							Extreme Sports and Expeditions
+						</a>
+					</div>
+				</div>
+				<div class="offers__row row wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+					<div class="offers__column--1 ibg">
+						<a class="offers__links ibg" href="#">
+							<picture >
+								<source src="img/HolidayIdeas/HolidayIdeas4.webp" type="image/webp" />
+								<img src="img/HolidayIdeas/HolidayIdeas4.png" alt="" />
+							</picture>
+							Games
+						</a>
+					</div>
+					<div class="offers__column--2 ibg">
+						<a class="offers__links ibg" href="#">
+							<picture >
+								<source src="img/HolidayIdeas/HolidayIdeas5.webp" type="image/webp" />
+								<img src="img/HolidayIdeas/HolidayIdeas5.png" alt="" />
+							</picture>
+							Culture and Education
+						</a>
+					</div>
+				</div>
+				<div class="offers__row row wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+					<div class="offers__column--2 ibg">
+						<a class="offers__links ibg" href="#">
+							<picture>
+								<source src="img/HolidayIdeas/HolidayIdeas6.webp" type="image/webp" />
+								<img src="img/HolidayIdeas/HolidayIdeas6.png" alt="" />
+							</picture>
+							Enjoyment and Relaxation
+						</a>
+					</div>
+					<div class="offers__column--1 ibg">
+						<a class="offers__links ibg" href="#">
+							<picture>
+								<source src="img/HolidayIdeas/HolidayIdeas7.webp" type="image/webp" />
+								<img src="img/HolidayIdeas/HolidayIdeas7.png" alt="" />
+							</picture>
+							Travelling
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="activity">
+				<div class="activity__header">
+					<h5 class="main-title">Create your holiday activity</h5>
+					<p class="activity__text">Hi! What are your holiday interests?</p>
+				</div>
+				<form class="form" action="" method="post">
+					<input
+						class="form__input"
+						type="text"
+						name="Interests"
+						placeholder="Enter your interests"
+					/>
+					<input class="button button--fill-red form__button" type="button" value="Search partners" />
+				</form>
+			</section>
+
+		</article>
+
+		<footer class="footer container">
+			<div class="footer__row row">
+				<div class="footer__column">
+					<a class="footer__link-brand" href="#">Dreamshare</a>
+				</div>
+				<div class="footer__column">
+					<h6 class="footer__title">Company</h6>
+					<ul class="footer__list">
+						<li><a class="footer__link" href="#">About</a></li>
+						<li><a class="footer__link" href="#">Contact</a></li>
+						<li><a class="footer__link" href="#">Press</a></li>
+						<li><a class="footer__link" href="#">Blog</a></li>
+						<li><a class="footer__link" href="#">Terms and Privacy</a></li>
+						<li><a class="footer__link" href="#">Help</a></li>
+					</ul>
+				</div>
+				<div class="footer__column">
+					<h6 class="footer__title">Partners</h6>
+				</div>
+			</div>
+		</footer>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/script.min.js"></script>
+	</body>
+</html>
