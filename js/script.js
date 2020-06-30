@@ -18,15 +18,20 @@ $('.modal-close').click(function(){
 
 (function ibg() {
 	$.each($(".ibg"), function (index, val) {
-		if ($(this).find("img").length > 0) {
+		if ($(this).find("img").attr("data-src").length > 0) {
 			$(this).css(
 				'background-image',
-				'url("' + $(this).find("img").attr("src") + '")'
+				'url("' + $(this).find("img").attr("data-src") + '")'
 			);
 		} else if ($(this).find("picture").length > 0) {
 			$(this).css(
 				'background-image',
-				'url("' + $(this).find("source").attr("src") + '")'
+				'url("' + $(this).find("source").attr("srcset") + '")'
+			);
+		} else if ($(this).find("img").length > 0) {
+			$(this).css(
+				'background-image',
+				'url("' + $(this).find("img").attr("src") + '")'
 			);
 		}
 	});
