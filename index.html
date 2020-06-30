@@ -45,14 +45,6 @@
 			!function(e,n,A){function o(e,n){return typeof e===n}function t(){var e,n,A,t,a,i,l;for(var f in r)if(r.hasOwnProperty(f)){if(e=[],n=r[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(A=0;A<n.options.aliases.length;A++)e.push(n.options.aliases[A].toLowerCase());for(t=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)i=e[a],l=i.split("."),1===l.length?Modernizr[l[0]]=t:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=t),s.push((t?"":"no-")+l.join("-"))}}function a(e){var n=u.className,A=Modernizr._config.classPrefix||"";if(c&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+A+"no-js(\\s|$)");n=n.replace(o,"$1"+A+"js$2")}Modernizr._config.enableClasses&&(n+=" "+A+e.join(" "+A),c?u.className.baseVal=n:u.className=n)}function i(e,n){if("object"==typeof e)for(var A in e)f(e,A)&&i(A,e[A]);else{e=e.toLowerCase();var o=e.split("."),t=Modernizr[o[0]];if(2==o.length&&(t=t[o[1]]),"undefined"!=typeof t)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),a([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}var s=[],r=[],l={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var A=this;setTimeout(function(){n(A[e])},0)},addTest:function(e,n,A){r.push({name:e,fn:n,options:A})},addAsyncTest:function(e){r.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=l,Modernizr=new Modernizr;var f,u=n.documentElement,c="svg"===u.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;f=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,A){return e.call(n,A)}}(),l._l={},l.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},l._trigger=function(e,n){if(this._l[e]){var A=this._l[e];setTimeout(function(){var e,o;for(e=0;e<A.length;e++)(o=A[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){l.addTest=i}),Modernizr.addAsyncTest(function(){function e(e,n,A){function o(n){var o=n&&"load"===n.type?1==t.width:!1,a="webp"===e;i(e,a&&o?new Boolean(o):o),A&&A(n)}var t=new Image;t.onerror=o,t.onload=o,t.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],A=n.shift();e(A.name,A.uri,function(A){if(A&&"load"===A.type)for(var o=0;o<n.length;o++)e(n[o].name,n[o].uri)})}),t(),a(s),delete l.addTest,delete l.addAsyncTest;for(var p=0;p<Modernizr._q.length;p++)Modernizr._q[p]();e.Modernizr=Modernizr}(window,document);
 		</script>
 
-		<link
-			rel="preload"
-			as="image"
-			href="img/header/Back1.webp"
-			media="(max-width: 1023px)"
-			onload="this.load=null;this.rel='stylesheet'"
-		/>
-
 		<!-- Critical CSS -->
 		<style>
 			*{-webkit-box-sizing:border-box;box-sizing:border-box}body{font-family:"Montserrat",sans-serif;color:#444;font-size:22px;font-weight:700;line-height: 27px;}body.lock{overflow:hidden}.image-wrapper img,.image-wrapper picture{width:100%}.container{width:100%;padding: 0 10px;}.row{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:wrap;flex-wrap:wrap}.column{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%}.button{width:-webkit-max-content;width:-moz-max-content;width:max-content;padding:9px 17px;text-align:center;box-sizing:border-box;border:1px solid;border-radius:20px;background-color:transparent;transition:all .5s ease;cursor:pointer}.button--white{color:#fff;border-color:transparent}.button--white:hover{color:#000;background-color:#fff}.button--outline-white{color:#fff;border-color:#fff}.button--outline-white:hover{color:#000;background-color:#fff}.header{position:relative;z-index:1;}.nav{display:flex;flex-direction:column-reverse;}.brand-logo{color:#fff;margin:95px auto 0 auto;text-transform:uppercase;font-size:20px;font-weight:700;line-height:24px;cursor:default}.brand-logo::after{content:"";width:0;height:2px;display:block;position:relative;top:0;left:50%;background-color:#fff;transition:all .5s ease}.brand-logo:hover::after{width:99%;left:1px}.register{margin:20px auto 0 auto;}.register__button{font-size:14px;font-weight:400;line-height:17px;}.modal-register{display:none;}.hero,.about,.partners,.offers{margin-bottom:94px;text-align:center;}.hero{height:364px;color:#fff;}.hero::before{content:"";height:540px;width:100%;position:absolute;top:0;left:0;z-index:0}.no-webp .hero::before, .no-js .hero::before{background:url(img/header/Back1.png) top no-repeat;background-size:cover;background-color:#000}.webp .hero::before{background:url(img/header/Back1.webp) top no-repeat;background-size:cover;background-color:#000}.hero__title,.hero__text,.hero__button{position:relative;}.hero__title{margin-top:25px;margin-bottom:20px;padding:0;font-size:30px;font-weight:700;line-height:37px;text-transform:uppercase;}.hero__text{font-family:"Roboto",sans-serif;margin-bottom:40px;font-size:18px;font-weight:300;line-height:24.5px}.hero__button{padding:12px 46px;font-size:14px;font-weight:700;line-height:17px;}
@@ -160,7 +152,7 @@
 						<div class="about__body ibg">
 							<picture>
 								<source srcset="img/HowWorks/howDreamshareWork1.webp" type="image/webp" />
-								<img src="img/HowWorks/howDreamshareWork1.png" alt="" />
+								<img class="lazyload" data-src="img/HowWorks/howDreamshareWork1.jpg" alt="" />
 							</picture>
 							<span class="about__subtitle">Step 1</span>
 							<h3 class="about__title">Sed leo enim, condimentum</h3>
@@ -172,7 +164,7 @@
 						<div class="about__body ibg">
 							<picture>
 								<source srcset="img/HowWorks/howDreamshareWork2.webp" type="image/webp" />
-								<img src="img/HowWorks/howDreamshareWork2.png" alt="" />
+								<img class="lazyload" data-src="img/HowWorks/howDreamshareWork2.jpg" alt="" />
 							</picture>
 							<span class="about__subtitle">Step 2</span>
 							<h3 class="about__title">Morbi velit risus</h3>
@@ -184,7 +176,7 @@
 						<div class="about__body ibg">
 							<picture>
 								<source srcset="img/HowWorks/howDreamshareWork3.webp" type="image/webp" />
-								<img src="img/HowWorks/howDreamshareWork3.png" alt="" />
+								<img class="lazyload" data-src="img/HowWorks/howDreamshareWork3.jpg" alt="" />
 							</picture>
 							<span class="about__subtitle">Step 3</span>
 							<h3 class="about__title">Sed leo enim, condimentum</h3>
@@ -204,7 +196,7 @@
 								<a href="#">
 									<picture>
 										<source srcset="img/Partners/Partner1.webp" type="image/webp" />
-										<img src="img/Partners/Partner1.png" alt="Bradley Hunter" />
+										<img class="lazyload" data-src="img/Partners/Partner1.jpg" alt="Bradley Hunter" />
 									</picture>
 								</a>
 							</div>
@@ -218,7 +210,7 @@
 								<a href="#">
 									<picture>
 										<source srcset="img/Partners/Partner2.webp" type="image/webp" />
-										<img src="img/Partners/Partner2.png" alt="Marie Bennett" />
+										<img class="lazyload" data-src="img/Partners/Partner2.jpg" alt="Marie Bennett" />
 									</picture>
 								</a>
 							</div>
@@ -233,7 +225,7 @@
 								<a href="#">
 									<picture>
 										<source srcset="img/Partners/Partner3.webp" type="image/webp" />
-										<img src="img/Partners/Partner3.png" alt="Diana Wells" />
+										<img class="lazyload" data-src="img/Partners/Partner3.jpg" alt="Diana Wells" />
 									</picture>
 								</a>
 							</div>
@@ -248,7 +240,7 @@
 								<a href="#">
 									<picture>
 										<source srcset="img/Partners/Partner4.webp" type="image/webp" />
-										<img src="img/Partners/Partner4.png" alt="Christopher Pierce" />
+										<img class="lazyload" data-src="img/Partners/Partner4.jpg" alt="Christopher Pierce" />
 									</picture>
 								</a>
 							</div>
@@ -268,7 +260,7 @@
 						<a class="offers__links ibg" href="#">
 							<picture>
 								<source srcset="img/HolidayIdeas/HolidayIdeas1.webp" type="image/webp" />
-								<img src="img/HolidayIdeas/HolidayIdeas1.png" alt="" />
+								<img class="lazyload" data-src="img/HolidayIdeas/HolidayIdeas1.jpg" alt="" />
 							</picture>
 							Sports and Activis
 						</a>
@@ -277,7 +269,7 @@
 						<a class="offers__links ibg" href="#">
 							<picture>
 								<source srcset="img/HolidayIdeas/HolidayIdeas2.webp" type="image/webp" />
-								<img src="img/HolidayIdeas/HolidayIdeas2.png" alt="" />
+								<img class="lazyload" data-src="img/HolidayIdeas/HolidayIdeas2.jpg" alt="" />
 							</picture>
 							Wellness and Health
 						</a>
@@ -286,7 +278,7 @@
 						<a class="offers__links ibg" href="#">
 							<picture>
 								<source srcset="img/HolidayIdeas/HolidayIdeas3.webp" type="image/webp" />
-								<img src="img/HolidayIdeas/HolidayIdeas3.png" alt="" />
+								<img class="lazyload" data-src="img/HolidayIdeas/HolidayIdeas3.jpg" alt="" />
 							</picture>
 							Extreme Sports and Expeditions
 						</a>
@@ -297,7 +289,7 @@
 						<a class="offers__links ibg" href="#">
 							<picture >
 								<source srcset="img/HolidayIdeas/HolidayIdeas4.webp" type="image/webp" />
-								<img src="img/HolidayIdeas/HolidayIdeas4.png" alt="" />
+								<img class="lazyload" data-src="img/HolidayIdeas/HolidayIdeas4.jpg" alt="" />
 							</picture>
 							Games
 						</a>
@@ -306,7 +298,7 @@
 						<a class="offers__links ibg" href="#">
 							<picture >
 								<source srcset="img/HolidayIdeas/HolidayIdeas5.webp" type="image/webp" />
-								<img src="img/HolidayIdeas/HolidayIdeas5.png" alt="" />
+								<img class="lazyload" data-src="img/HolidayIdeas/HolidayIdeas5.jpg" alt="" />
 							</picture>
 							Culture and Education
 						</a>
@@ -317,7 +309,7 @@
 						<a class="offers__links ibg" href="#">
 							<picture>
 								<source srcset="img/HolidayIdeas/HolidayIdeas6.webp" type="image/webp" />
-								<img src="img/HolidayIdeas/HolidayIdeas6.png" alt="" />
+								<img class="lazyload" data-src="img/HolidayIdeas/HolidayIdeas6.jpg" alt="" />
 							</picture>
 							Enjoyment and Relaxation
 						</a>
@@ -326,7 +318,7 @@
 						<a class="offers__links ibg" href="#">
 							<picture>
 								<source srcset="img/HolidayIdeas/HolidayIdeas7.webp" type="image/webp" />
-								<img src="img/HolidayIdeas/HolidayIdeas7.png" alt="" />
+								<img class="lazyload" data-src="img/HolidayIdeas/HolidayIdeas7.jpg" alt="" />
 							</picture>
 							Travelling
 						</a>
@@ -375,6 +367,7 @@
 		</footer>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/lazysizes.min.js" async></script>
 		<script src="js/script.min.js"></script>
 	</body>
 </html>
