@@ -38,17 +38,23 @@
 }
 
 .modal-register {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 10;
-	display: none;
+	z-index: -5;
+	opacity: 0;
 	overflow: hidden;
-	justify-content: center;
-	align-items: center;
+}
+
+.modal-register.showed {
+	z-index: 10;
+	opacity: 1;
 }
 
 .modal-register .form__input,
@@ -61,19 +67,28 @@
 	cursor: pointer;
 }
 
-.modal-register .form-login,
-.modal-register .form-sign-up {
+.form-login,
+.form-sign-up {
 	width: 350px;
-	border-radius: 10px;
-	display: none;
+	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	position:absolute;
+	bottom: -200%;
+	border-radius: 10px;
 	background-color: #fff;
+	transition: bottom 0.5s linear;
 }
 
-.modal-register .form-login form,
-.modal-register .form-sign-up form {
+.form-login.showed,
+.form-sign-up.showed {
+	bottom: 50%;
+	transform: translateY(50%);
+}
+
+.form-login form,
+.form-sign-up form {
 	width: 70%;
 	margin-bottom: 20px;
 }
@@ -343,6 +358,10 @@
 	line-height: 18px;
 	text-align: center;
 	margin-bottom: 35px;
+}
+
+.activity__label {
+	visibility: collapse;
 }
 
 .form {
