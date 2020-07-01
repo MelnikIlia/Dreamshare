@@ -1,40 +1,45 @@
-$('#log-in').click(function(){
-	$('.modal-register').css('display', 'flex').hide().fadeIn(200);
-	$('.form-login').css('display', 'flex');
-	$('body').css('overflow', 'hidden');
+let body              = document.querySelector('body'),
+	modal_register    = document.querySelector('.modal-register'),
+	form_login        = document.querySelector('.form-login'),
+	form_signUp       = document.querySelector('.form-sign-up'),
+	logIn_button      = document.querySelector('#log-in'),
+	signUp_button     = document.querySelector('#sign-up'),
+	modalClose_button = document.getElementsByClassName('modal-close'),
+	ibg               = document.getElementsByClassName('ibg');
+
+logIn_button.addEventListener("click", () => {
+	modal_register.classList.add('showed');
+	form_login.classList.add('showed');
+	body.classList.add('lock');
 });
 
-$('#sign-up').click(function(){
-	$('.modal-register').css('display', 'flex').hide().fadeIn(200);
-	$('.form-sign-up').css('display', 'flex');
-	$('body').css('overflow', 'hidden');
+signUp_button.addEventListener("click", () => {
+	modal_register.classList.add('showed');
+	form_signUp.classList.add('showed');
+	body.classList.add('lock');
 });
 
-$('.modal-close').click(function(){
-	$('.modal-register').fadeOut(200);
-	$('.form-sign-up, .form-login').css('display', 'none');
-	$('body').css('overflow', 'auto');
-});
+for (const item of modalClose_button) {
+	item.addEventListener("click", () => {
+		modal_register.classList.remove('showed');
+		item.closest('div').classList.remove('showed');
+		body.classList.remove('lock');
+	});	
+}
 
-(function ibg() {
-	$.each($(".ibg"), function (index, val) {
-		if ($(this).find("img").attr("data-src").length > 0) {
-			$(this).css(
-				'background-image',
-				'url("' + $(this).find("img").attr("data-src") + '")'
-			);
-		} else if ($(this).find("picture").length > 0) {
-			$(this).css(
-				'background-image',
-				'url("' + $(this).find("source").attr("srcset") + '")'
-			);
-		} else if ($(this).find("img").length > 0) {
-			$(this).css(
-				'background-image',
-				'url("' + $(this).find("img").attr("src") + '")'
-			);
+(() => {
+	for (const item of ibg) {
+		if(item.querySelectorAll("img")[0].getAttribute("data-src").length > 0) {
+			item.style.backgroundImage =
+				'url("' + item.querySelectorAll("img")[0].getAttribute("data-src") + '")';
+		} else if(item.querySelectorAll("picture")[0].length > 0) {
+			item.style.backgroundImage =
+				'url("' + item.querySelectorAll("source")[0].getAttribute("srcset") + '")';
+		} else if(item.querySelectorAll("img")[0].length > 0) {
+			item.style.backgroundImage =
+				'url("' + item.querySelectorAll("img")[0].getAttribute("src") + '")';
 		}
-	});
+	}
 })();
 
 new WOW({mobile: false}).init();
