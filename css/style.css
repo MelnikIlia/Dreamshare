@@ -274,22 +274,22 @@
 }
 
 .partner__avatar.avatar-1::after {
-	background-image: url("../img/icons/Music.svg");
+	background-image: url("../img/icons/music.svg");
 	background-color: #ff4e50;
 }
 
 .partner__avatar.avatar-2::after {
-	background-image: url("../img/icons/Brush.svg");
+	background-image: url("../img/icons/brush.svg");
 	background-color: #19d4ca;
 }
 
 .partner__avatar.avatar-3::after {
-	background-image: url("../img/icons/Camera.svg");
+	background-image: url("../img/icons/camera.svg");
 	background-color: #ffa710;
 }
 
 .partner__avatar.avatar-4::after {
-	background-image: url("../img/icons/Airplane.svg");
+	background-image: url("../img/icons/airplane.svg");
 	background-color: #667df3;
 }
 
